@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width:100%;bgcolor="#F4F4F4">
+        <tr style="width:100%;height:45px;background-color:white">
+                   <td class="style1" width="100px">
+                       <asp:Image ID="Image1" runat="server" Height="65px" Width="120px" 
+                           ImageUrl="~/Image/Screenshot_20240110_214049-01.jpeg" />
+                   </td>
+                   <td colspan="3" bgcolor="#F4F4F4">
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+            ForeColor="#F4F4F4" BackColor="#F4F4F4" Font-Bold="False" RenderingMode="Table" 
+            Width="100%">
+            <Items>
+               
+                <asp:MenuItem Text="MangeProduct" Value="ManageProduct" 
+                    NavigateUrl="~/AddProuct.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="View Registrations" Value="View Registrations" 
+                    NavigateUrl="~/Registration1.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="View FeedBack" Value="Services" 
+                    NavigateUrl="~/feedbackadmin.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="view order" Value="About Us" NavigateUrl="~/vieworder.aspx"></asp:MenuItem>
+            </Items>
+
+           <StaticHoverStyle BackColor="#FF9900" />
+
+
+            <StaticMenuItemStyle HorizontalPadding="68px" BackColor="#F4F4F4"
+                Font-Bold="True" ForeColor="Black" BorderStyle="Solid" Font-Size="20px" 
+                Height="30px" VerticalPadding="5px"></StaticMenuItemStyle>
+        </asp:Menu>
+        <td style="width:150px; text-align:center;" bgcolor="#F4F4F4">
+                       <asp:ImageButton ID="ImageButton3" runat="server" 
+                           ImageUrl="~/Image/user-interface.png" Height="45px" Width="45px" 
+                           PostBackUrl="~/Log In.aspx" ImageAlign="Middle" />&nbsp;<span style="background-color: #F4F4F4">&nbsp;
+                       <asp:ImageButton ID="ImageButton1" 
+                           runat="server" Height="45px" ImageUrl="~/Image/unauthorized-person.png" 
+                           Width="45px" PostBackUrl="~/adminlogin.aspx" ImageAlign="Middle" />
+                           </span>
+                       </td>
+         
+          </td>
+</tr></table>
+  <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

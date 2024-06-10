@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Shriram.master.cs" Inherits="Shriram" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+        <style>
+            *{
+              margin:0;
+              padding:0;
+              }
+              
+            .style1
+            {
+                height: 62px;
+            }
+ 
+            .style2
+            {
+                width: 150px;
+                height: 62px;
+            }
+        </style>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div >
+    <table style="width:100%;position:fixed;top:0; left: 0px; height: 66px;" 
+            bgcolor="#F4F4F4">
+               <tr style="width:100%;background-color:white">
+                   <td class="style1" width="100px">
+                       <asp:Image ID="Image1" runat="server" Height="65px" Width="120px" 
+                           ImageUrl="~/Image/Screenshot_20240110_214049-01.jpeg" />
+                   </td>
+                   <td colspan="3" bgcolor="#F4F4F4" class="style1">
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+            ForeColor="#F4F4F4" BackColor="#F4F4F4" Font-Bold="False" RenderingMode="Table" 
+            Width="100%" Height="67px">
+            <Items>
+                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="Home.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Products" Value="Products" NavigateUrl="~/Product.aspx">
+                </asp:MenuItem>
+                <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="~/About Us.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Contact Us" Value="Contact Us" 
+                    NavigateUrl="~/Contact Ust.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="FeedBack" Value="FeedBack" NavigateUrl="~/FeedBack.aspx"></asp:MenuItem>
+            </Items>
+
+            <StaticHoverStyle BackColor="#FF9900" />
+
+            <StaticMenuItemStyle HorizontalPadding="68px" BackColor="#F4F4F4"
+                Font-Bold="True" ForeColor="Black" BorderStyle="Solid" Font-Size="20px" 
+                Height="30px" VerticalPadding="5px"></StaticMenuItemStyle>
+        </asp:Menu>
+          </td>
+         <td style="text-align:center;" bgcolor="#F4F4F4" class="style2">
+                       <asp:ImageButton ID="ImageButton3" runat="server" 
+                           ImageUrl="~/Image/user-interface.png" Height="45px" Width="45px" 
+                           PostBackUrl="~/Log In.aspx" ImageAlign="Middle" />&nbsp;<span style="background-color: #F4F4F4">&nbsp;
+                       <asp:ImageButton ID="ImageButton1" 
+                           runat="server" Height="45px" ImageUrl="~/Image/unauthorized-person.png" 
+                           Width="45px" PostBackUrl="~/adminlogin.aspx" ImageAlign="Middle" />
+                           </span>
+                       </td>
+               </tr></table>
+
+             
+<table style="width:100%;margin-top:80px; height: 51px;"bgcolor="Black">
+  <tr>
+  <td colspan="2" style="text-align:right">
+      <asp:Label ID="Label2" runat="server" style="text-align:left" Font-Bold="True" 
+          ForeColor="White"></asp:Label>
+      <asp:HyperLink ID="HyperLink1"
+          runat="server" Font-Bold="True" Font-Names="Arial Black" ForeColor="White" 
+          NavigateUrl="~/Log In.aspx">Click Here to Log In</asp:HyperLink>
+          <asp:Button ID="Button1" runat="server" Text="Log Out" BackColor="Red" 
+          Font-Bold="True" ForeColor="White" onclick="Button1_Click1" />
+  </td>
+  </tr>
+  </table>
+
+      <table style="width:100%"> 
+    <tr >
+    <td colspan="3">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+            </asp:ContentPlaceHolder>
+            </td>
+            </tr>
+       
+    </form>
+</body>
+</html>
